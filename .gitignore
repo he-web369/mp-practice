@@ -1,6 +1,5 @@
 .DS_Store
-my-demotest/node_modules/
-my-demotest/dist/
+my-demotest
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
