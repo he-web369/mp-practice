@@ -1,0 +1,13 @@
+<!--miniprogram/pages/movies/movies.wxml-->
+<view>
+  <navigator url="/pages/movieDetail/movieDetail?index={{index}}" class="moviesContainer" wx:for="{{moviesArr}}" wx:key='index'>
+    <image class="movieImg" src="{{item.images.large}}"></image>
+    <view class="movie_detail">
+      <text class="movie_name">{{item.title}}</text>
+      <text class="movie_year">年份：{{item.year}}</text>
+      <text class="movie_director">导演：{{item.directors[0].name}}</text>
+    </view>
+    <text class="movie_score">{{item.rating.average}}</text>
+  </navigator>
+</view>
+

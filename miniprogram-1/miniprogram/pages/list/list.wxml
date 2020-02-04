@@ -1,0 +1,17 @@
+<!--miniprogram/pages/list/list.wxml-->
+<import src='../template/list-template.wxml'/>
+<view>
+  <swiper indicator-dots autoplay circular interval="3000"
+  indicator-color='orange' indicator-active-color="black"
+  >
+    <swiper-item catchtap='carouselToDetail' data-index='{{index}}' wx:for="{{['01','02','03','04']}}" wx:key='*this'>
+      <image src="/images/detail/carousel/{{item}}.jpg"></image>
+    </swiper-item>
+  </swiper>
+  <view wx:for='{{listArr}}'  bindtap="toDetail" data-currentindex='{{index}}' wx:key='index'>
+    <template 
+    data="{{...item}}"
+    is="list-template" 
+    ></template >
+  </view>
+</view>

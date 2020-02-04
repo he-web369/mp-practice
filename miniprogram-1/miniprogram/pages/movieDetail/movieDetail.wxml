@@ -1,0 +1,11 @@
+<!--miniprogram/pages/movieDetail/movieDetail.wxml-->
+<view class="movieDetailContainer">
+  <image class="movieDetailImg" src="{{images.large}}"></image>
+  <text class="name">{{title}}</text>
+  <view class="movie_detail">
+    <text class="score">评分：{{rating.average}}</text>
+    <text class="director">导演：{{directors[0].name}}</text>
+    <text class="casts">主演：{{casts[1].name}}</text>
+  </view>
+  <button class="btn">我要观影</button>
+</view>

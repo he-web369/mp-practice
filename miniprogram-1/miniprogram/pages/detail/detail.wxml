@@ -1,0 +1,21 @@
+<!--miniprogram/pages/detail/detail.wxml-->
+<view class="detailContainer">
+  <image class="headerImg"  wx:if="detail_img" src="../..{{detail_img}}"></image>
+  <image class="music" catchtap="handleMusicPlay" wx:if='{{!musicPlay}}'  src="../../images/music/music-start.png"></image>
+  <image class="music" wx:else catchtap="handleMusicPlay" src="../../images/music/music-stop.png"></image>
+  <view class="avatar_date">
+    <image wx:if="avatar" src="../..{{avatar}}"></image>
+    <text>{{author}}发布于{{date}}</text>
+  </view>  
+  <text class="title">{{title}}</text>
+  <view class="collection_share_container">
+    <view class="collection_share">
+      <image catchtap="handleCollection" wx:if="{{!isCollected}}" src="../../images/icon/collection-anti.png"></image>
+      <image catchtap="handleCollection" wx:else src="../../images/icon/collection.png"></image>
+      <image catchtap="handleShare" src="../../images/icon/share.png"></image>
+    </view>
+      <view class="line"></view>
+  </view>
+  <button open-type="share" >转发此文章</button>
+  <text class="content">{{detail_content}}</text>
+</view>
